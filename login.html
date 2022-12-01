@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style type="text/css">
+      @import url("https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@400;500&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        font-family: "Lora", serif;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      section {
+        width: 58%;
+        height: 450px;
+        box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(rgb(253, 235, 235), rgb(191, 237, 255));
+        border-radius: 10px;
+        /* background-color: thistle; */
+      }
+
+      section h2 {
+        width: 100%;
+        height: 50px;
+        /* background-color: hotpink; */
+        border-bottom: 1px solid #ccc;
+        line-height: 50px;
+        padding-left: 15px;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+      }
+
+      section .text {
+        width: 100%;
+        height: 500px;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .text .box {
+        width: 400px;
+        height: 400px;
+        text-align: center;
+
+        /* border: 1px solid rebeccapurple; */
+      }
+
+      .text .box h4 {
+        font-size: 1.13rem;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        font-weight: 300;
+
+        margin-bottom: 30px;
+      }
+
+      .fa-facebook-f {
+        color: #fff;
+        background-color: blue;
+        border-radius: 7px;
+        font-size: 1.7rem;
+        padding: 10px 15px;
+        margin: 0px 2px;
+
+        cursor: pointer;
+      }
+
+      .fa-google {
+        color: dodgerblue;
+        background-color: #ddd;
+        border-radius: 7px;
+        font-size: 1.7rem;
+        padding: 10px 12px;
+        margin: 0px 2px;
+
+        cursor: pointer;
+      }
+
+      .fa-apple {
+        color: #fff;
+        background-color: #000;
+        border-radius: 7px;
+        font-size: 1.7rem;
+        padding: 10px 15px;
+        margin: 0px 2px;
+
+        cursor: pointer;
+      }
+
+      .text .boxx {
+        width: 330px;
+        height: 400px;
+        /* background-color: yellow; */
+      }
+
+      .boxx h5 {
+        font-size: 1.1rem;
+        font-weight: 300;
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
+        margin: 10px 20px;
+      }
+
+      .boxx .ipt {
+        width: 100%;
+        height: 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+
+      .boxx .ipt input {
+        width: 100%;
+        height: 40px;
+        outline: none;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: transparent;
+        font-family: "lora", serif;
+        font-size: 1rem;
+
+        padding: 0px 10px;
+      }
+
+      .boxx .ipt input:hover {
+        box-shadow: 0px 0px 5px 2px rgb(138, 195, 255);
+        border: 1px solid transparent;
+      }
+
+      .boxx .tpi {
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      .boxx .tpi input {
+        margin-right: 18px;
+      }
+
+      .boxx .tpi label {
+        margin-left: -19px;
+        font-size: 0.9rem;
+        text-transform: capitalize;
+      }
+
+      .boxx .tpi a {
+        padding: 0px 8px;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 0.8rem;
+        color: blue;
+      }
+
+      .boxx .login {
+        text-decoration: none;
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+
+        margin: 20px 10px;
+        padding: 15px 130px;
+        border-radius: 50px 100px 50px 100px;
+        background-color: darkblue;
+        color: #fff;
+
+        display: block;
+        transition: all 0.2s;
+      }
+
+      .boxx .login:hover {
+        box-shadow: 1px 1px 3px 1px rgb(93, 127, 239);
+        border-bottom-width: 5px;
+        background-color: rgba(238, 238, 238, 0.886);
+        color: rgb(17, 0, 255);
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>Log in</h2>
+      <div class="text">
+        <div class="box">
+          <h4>Log in with your social network.</h4>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-apple"></i>
+          </div>
+        </div>
+        <div class="boxx">
+          <h5>Log in with your email account</h5>
+          <div class="ipt">
+            <input
+              type="email"
+              name="gmail"
+              id="mail"
+              placeholder="Email*"
+              autocomplete="off"
+            />
+            <input
+              type="password"
+              name="pword"
+              id="pcode"
+              placeholder="Password*"
+            />
+          </div>
+          <div class="tpi">
+            <input
+              type="checkbox"
+              name="log"
+              id="lin"
+              class=""
+              value="0"
+            /><label>Keep me logged in</label>
+            <a href="#">Forgot your password?</a>
+          </div>
+          <a href="index.html" class="login">Log in</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style type="text/css">
+      @import url("https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@400;500&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        font-family: "Lora", serif;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      section {
+        width: 58%;
+        height: 500px;
+        box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(rgb(212, 255, 253), rgb(251, 209, 209));
+        border-radius: 15px;
+      }
+
+      section h1 {
+        width: 100%;
+        height: 50px;
+        border-bottom: 1px solid #ccc;
+
+        line-height: 50px;
+        padding-left: 30px;
+
+        font-size: 1.5rem;
+      }
+
+      section .container {
+        width: 100%;
+        height: 450px;
+        /* background-color: gray; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container .cone {
+        width: 370px;
+        height: 400px;
+        /* background-color: red; */
+      }
+
+      .container .cone h2 {
+        font-size: 1rem;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        text-align: center;
+
+        margin-top: 20px;
+      }
+
+      .container .cone .icons {
+        text-align: center;
+
+        margin-top: 30px;
+      }
+
+      .container .cone .icons i {
+        font-size: 1.9rem;
+        margin: 0px 5px;
+      }
+
+      .fa-facebook-f {
+        color: #fff;
+        background-color: blue;
+        border-radius: 7px;
+        font-size: 1.7rem;
+        padding: 10px 15px;
+        margin: 0px 2px;
+
+        cursor: pointer;
+      }
+
+      .fa-google {
+        color: dodgerblue;
+        background-color: #ddd;
+        border-radius: 7px;
+        font-size: 1.7rem;
+        padding: 10px 12px;
+        margin: 0px 2px;
+
+        cursor: pointer;
+      }
+
+      .fa-apple {
+        color: #fff;
+        background-color: #000;
+        border-radius: 7px;
+        font-size: 1.7rem;
+        padding: 10px 15px;
+        margin: 0px 2px;
+
+        cursor: pointer;
+      }
+
+      .container .ctwo {
+        width: 400px;
+        height: 430px;
+        /* background-color: beige; */
+      }
+
+      .ctwo h3 {
+        height: 3vw;
+        width: 30%;
+        margin-top: 7%;
+
+        font-weight: 300;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+
+      .ctwo .gmail {
+        width: 80%;
+        height: 3.5vw;
+
+        outline: none;
+        border: 1px solid #bbb;
+        border-radius: 10px;
+        background-color: transparent;
+        padding-left: 10px;
+        /* margin-bottom: 18px; */
+
+        font-size: 1rem;
+        transition: all 0.3s;
+      }
+
+      .gmail:hover {
+        box-shadow: 0px 0px 5px 2px rgb(93, 170, 253);
+        border: 1px solid transparent;
+      }
+
+      .ctwo .one {
+        width: 80%;
+        height: 4vw;
+        /* background-color: #000; */
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-top: 15px;
+      }
+
+      .ctwo .one .name {
+        width: 43%;
+        height: 3.5vw;
+        border-radius: 10px;
+
+        outline: none;
+        border: 1px solid #bbb;
+        background-color: transparent;
+        padding-left: 10px;
+
+        text-transform: capitalize;
+        letter-spacing: 1px;
+
+        transition: all 0.3s;
+      }
+
+      .name:hover {
+        box-shadow: 0px 0px 5px 2px rgb(93, 170, 253);
+        border: 1px solid transparent;
+      }
+
+      .ctwo .two {
+        width: 80%;
+        height: 4vw;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-top: 10px;
+      }
+
+      .ctwo .two .password {
+        width: 44%;
+        height: 3.5vw;
+        border: 1px solid #bbb;
+        border-radius: 10px;
+        background-color: transparent;
+        outline: none;
+
+        text-transform: capitalize;
+        padding-left: 10px;
+
+        transition: all 0.3s;
+      }
+
+      .password:hover {
+        box-shadow: 0px 0px 5px 2px rgb(138, 195, 255);
+        border: 1px solid transparent;
+      }
+
+      .ctwo .check {
+        width: 100%;
+        height: 3vw;
+
+        margin-top: 10px;
+      }
+
+      .ctwo .check .ck {
+        margin-bottom: 18px;
+      }
+
+      .ctwo .check .ckk small {
+        color: blue;
+        font-weight: 500;
+      }
+
+      .ctwo .signup {
+        width: 100%;
+        height: 8vw;
+
+        /* background-color: cadetblue; */
+        margin: 20px 0px;
+        display: inline-block;
+        text-align: center;
+      }
+
+      .signup a {
+        text-decoration: none;
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+
+        margin: 10px 10px;
+        padding: 15px 130px;
+        border-radius: 50px 100px 50px 100px;
+        background-color: darkblue;
+        color: #fff;
+
+        display: block;
+        transition: all 0.2s;
+      }
+
+      .signup a:hover {
+        box-shadow: 1px 1px 3px 1px rgb(93, 127, 239);
+        border-bottom-width: 5px;
+        background-color: rgba(238, 238, 238, 0.886);
+        color: rgb(17, 0, 255);
+        text-decoration: underline;
+      }
+
+      .signup p {
+        font-weight: 450;
+        letter-spacing: 1px;
+        transition: all 0.2s;
+      }
+
+      .signup p:hover {
+        text-decoration: underline;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Sign Up</h1>
+      <div class="container">
+        <div class="cone">
+          <h2>Sign up with your social network.</h2>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-apple"></i>
+          </div>
+        </div>
+
+        <div class="ctwo">
+          <h3>Sign up</h3>
+          <input
+            type="email"
+            name="gmail"
+            id=""
+            class="gmail"
+            placeholder="Email*"
+            autocomplete="off"
+          />
+
+          <div class="one">
+            <input
+              type="text"
+              name="first"
+              id=""
+              class="name"
+              placeholder="First name*"
+            />
+            <input
+              type="text"
+              name="second"
+              id=""
+              class="name"
+              placeholder="Second name*"
+            />
+          </div>
+          <div class="two">
+            <input
+              type="password"
+              name="pw"
+              id=""
+              class="password"
+              placeholder="password*"
+            />
+            <input
+              type="password"
+              name="pw"
+              id=""
+              class="password"
+              placeholder="Confirm password"
+            />
+          </div>
+          <div class="check">
+            <input type="checkbox" name="showone" id="sock" class="ck" />
+            <label for="sock"
+              >Sign me up for email updtes from Taylia Shopping.</label
+            >
+            <br />
+
+            <input type="checkbox" name="showntwo" id="stck" class="" />
+            <label for="stck" class="ckk"
+              >I agree to the <small>Terms of Use</small> and
+              <small>Privacy notice</small>.</label
+            >
+          </div>
+          <div class="signup">
+            <a href="index.html">Sign Up</a>
+            <p>Have an account already?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
